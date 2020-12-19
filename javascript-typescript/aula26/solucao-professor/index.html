@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Calcule seu IMC</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     
     <section class="container">
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <h1>Calcule seu IMC</h1>
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas culpa eveniet aperiam, cumque placeat reiciendis. Optio fugiat, odio similique voluptates, rerum perferendis eligendi fugit sunt facilis, unde consequatur cum.
-        </p>
+        <form action="/" id="formulario" method="POST">
+            <label for="peso">Peso</label>
+            <input type="text" id="peso" name="peso">
 
-        <form action="">
-            <label for="input-test-1">Label teste #1</label>
-            <input type="text" id="input-test-1">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" name="altura">
 
-            <label for="input-test-2">Label teste #2</label>
-            <input type="password" id="input-test-2">
-
-            <label for="input-test-3">Label teste #3</label>
-            <input type="email" id="input-test-3">
-
-            <label for="input-test-4">Label teste #4</label>
-            <input type="number" id="input-test-4">
-
-            <button>Enviar</button>
+            <button type="submit">Calcular</button>
         </form>
-    </section>
 
+        <div id="resultado"></div>
+    </section>
+    
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
