@@ -1,2 +1,3 @@
-# learning-js
- Repositório dedicado aos aprendizados em JavaScript
+# Learning JavaScript and TypeScript
+
+ Repositório dedicado aos aprendizados com JavaScript e TypeScript
