@@ -29,10 +29,8 @@ start.addEventListener('click', (event) => {
 pause.addEventListener('click', (event) => {
     if (segundos !== 0){
         timer.classList.add('paused');
-        clearInterval(clock);
-    } else {
-        clearInterval(clock);
-    }
+    } 
+    clearInterval(clock);
 });
 
 reset.addEventListener('click', (event) => {
