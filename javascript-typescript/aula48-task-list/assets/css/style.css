@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #acacd8; /* para criar a variável temos que colocar os -- antes*/
+    --second-color:  #8181d3;
+}
+
+* {
+    box-sizing: border-box; /* ajuda a não ter que ficar fazendo conta com margens e padding's*/
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: "Roboto Mono", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    max-width: 640px; /* tamanho do container*/
+    margin: 10px auto; /* vamos alinhar horizontalmente*/
+    background: white;
+    padding: 20px;
+    box-shadow: 8px 8px #000000;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+input {
+    font-size: 16px;
+    width: 200px;
+    height: 30px;
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
+    padding: 5px;
+}   
+
+input:focus {
+    outline: 1px solid var(--second-color);
+}
+
+input::placeholder {
+    color: var(--second-color);
+    opacity: 0.5;
+    font-style: italic;
+}
+
+button {
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 2px solid var(--second-color);
+}
+
+
+button:hover {
+    background: var(--second-color);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul li::before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: var(--primary-color);
+    margin-right: 10px;
+}
