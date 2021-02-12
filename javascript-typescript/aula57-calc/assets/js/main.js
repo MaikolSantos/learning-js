@@ -6,10 +6,40 @@ function criaCalculadora() {
 
         iniciar() {
             this.cliqueBotoes();
+            this.enter();
+        },
+
+        enter(){
+            this.display.addEventListener('keyup', (e) => {
+                if (e.keyCode === 13) {
+                    this.conta();
+                }
+            });
         },
 
         clearDisplay() {
             this.display.value = '';
+        },
+
+        apagaUm() {
+            this.display.value = this.display.value.slice(0, -1);
+        },
+
+        conta() {
+            let conta = this.display.value;
+
+            try {
+                conta = eval(conta);
+
+                if(!conta) {
+                    alert('Conta inválida');
+                    return;
+                }
+                this.display.value = conta;
+            } catch (error) {
+                alert('Conta inválida');
+                return;
+            }
         },
 
         cliqueBotoes() {
@@ -21,6 +51,14 @@ function criaCalculadora() {
 
                 if (el.classList.contains('btn-clear')) {
                     this.clearDisplay();
+                }
+
+                if (el.classList.contains('btn-del')){
+                    this.apagaUm();
+                }
+
+                if(el.classList.contains('btn-eq')) {
+                    this.conta();
                 }
             });
         },
