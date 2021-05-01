@@ -1,8 +1,11 @@
 const button = document.querySelector('button')
+const feedbackValido = document.querySelector('.feedback-2')
+const feedbackInvalido = document.querySelector('.feedback-1')
+const inputCpf = document.querySelector('#input-test-1')
 
 function validar(event) {
-    const cpfUser = document.querySelector('#input-test-1').value
     event.preventDefault()
+    const cpfUser = inputCpf.value
 
     const clearCpfUser = cpfUser.trim().replace(/\D+/g, '')
 
@@ -31,8 +34,16 @@ function validar(event) {
 
     const checkCpf = criaDigitos() === clearCpfUser
 
-    if (checkCpf) console.log(checkCpf)
-    if (!checkCpf) console.log(false)
+    if (checkCpf) {
+        feedbackInvalido.classList.remove('invalido')
+        feedbackValido.classList.add('valido')
+    }
+    if (!checkCpf) {
+        feedbackValido.classList.remove('valido')
+        feedbackInvalido.classList.add('invalido')
+        inputCpf.classList.add('invalido')
+        inputCpf.value = ''
+    }
 }
 
 button.addEventListener('click', validar)
