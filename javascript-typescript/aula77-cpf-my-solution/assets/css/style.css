@@ -87,18 +87,18 @@ form button:hover {
     background: var(--second-color);
 }
 
-.feedback-1, .feedback-2 {
+.feedback {
     font-size: .85rem;
     font-weight: bold;
     display: none;
 }
 
-.feedback-2.valido {
+.feedback.valido {
     color: #13AB0A;
     display: block;
 }
 
-.feedback-1.invalido {
+.feedback.invalido {
     color: #D90A02;
     display: block;
 }

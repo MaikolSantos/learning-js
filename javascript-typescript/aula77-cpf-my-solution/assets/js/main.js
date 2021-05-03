@@ -1,6 +1,5 @@
 const button = document.querySelector('button')
-const feedbackValido = document.querySelector('.feedback-2')
-const feedbackInvalido = document.querySelector('.feedback-1')
+const feedback = document.querySelector('.feedback')
 const inputCpf = document.querySelector('#input-test-1')
 
 function validar(event) {
@@ -35,12 +34,14 @@ function validar(event) {
     const checkCpf = criaDigitos() === clearCpfUser
 
     if (checkCpf) {
-        feedbackInvalido.classList.remove('invalido')
-        feedbackValido.classList.add('valido')
+        feedback.classList.remove('invalido')
+        feedback.innerText = 'CPF Válido'
+        feedback.classList.add('valido')
     }
     if (!checkCpf) {
-        feedbackValido.classList.remove('valido')
-        feedbackInvalido.classList.add('invalido')
+        feedback.classList.remove('valido')
+        feedback.innerText = 'CPF Inválido'
+        feedback.classList.add('invalido')
         inputCpf.classList.add('invalido')
         inputCpf.value = ''
     }
