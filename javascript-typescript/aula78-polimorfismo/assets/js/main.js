@@ -29,7 +29,7 @@ function ContaCorrete(agencia, conta, saldo, limite) {
 ContaCorrete.prototype = Object.create(Conta.prototype);
 ContaCorrete.prototype.constructor = ContaCorrete;
 
-Conta.prototype.sacar = function(valor) {
+ContaCorrete.prototype.sacar = function(valor) {
     if(valor > this.saldo + this.limite) {
         return console.log(`Saldo insuficiente: R$ ${this.saldo.toFixed(2)}`);
     }
